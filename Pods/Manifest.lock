@@ -1,0 +1,16 @@
+PODS:
+  - XCDYouTubeVideoPlayerViewController (1.1.2)
+
+DEPENDENCIES:
+  - XCDYouTubeVideoPlayerViewController (~> 1.1)
+
+SPEC REPOS:
+  trunk:
+    - XCDYouTubeVideoPlayerViewController
+
+SPEC CHECKSUMS:
+  XCDYouTubeVideoPlayerViewController: 6109df71b5976a3c142ffb4a266448c77f60f94d
+
+PODFILE CHECKSUM: aed3bacdd08817740db8245f99b886d46cffb763
+
+COCOAPODS: 1.16.2

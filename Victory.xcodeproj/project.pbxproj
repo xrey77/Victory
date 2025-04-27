@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023C3A45D007F6FAC472294C /* Pods_Victory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BC60B97A1F3B1737982AA5 /* Pods_Victory.framework */; };
+		A109E1542DAB5F7A006F9C39 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E1532DAB5F7A006F9C39 /* BooksViewController.m */; };
+		A109E1582DAB63A4006F9C39 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E1572DAB63A4006F9C39 /* ProfileViewController.m */; };
+		A109E1632DACAB78006F9C39 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E1622DACAB78006F9C39 /* SettingsViewController.m */; };
+		A109E1672DACABBE006F9C39 /* PastorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E1662DACABBE006F9C39 /* PastorsViewController.m */; };
+		A109E16B2DACCA52006F9C39 /* VgroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E16A2DACCA52006F9C39 /* VgroupViewController.m */; };
+		A109E16F2DACCA6E006F9C39 /* TightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109E16E2DACCA6E006F9C39 /* TightsViewController.m */; };
+		A10AC89A2DB4D97D00B85785 /* BooksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10AC8992DB4D97D00B85785 /* BooksTableViewController.m */; };
+		A10EA8D02DB0F8CB00AE35FC /* MYTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A10EA8CF2DB0F8CB00AE35FC /* MYTapGestureRecognizer.m */; };
+		A13ACA952DBB4AF30066038E /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13ACA942DBB4AF30066038E /* VideoTableViewController.m */; };
+		A14403B22DA4B79800D6E902 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403B12DA4B79800D6E902 /* AppDelegate.m */; };
+		A14403B52DA4B79800D6E902 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403B42DA4B79800D6E902 /* SceneDelegate.m */; };
+		A14403B82DA4B79800D6E902 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403B72DA4B79800D6E902 /* MainViewController.m */; };
+		A14403BB2DA4B79800D6E902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14403B92DA4B79800D6E902 /* Main.storyboard */; };
+		A14403BD2DA4B79B00D6E902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14403BC2DA4B79B00D6E902 /* Assets.xcassets */; };
+		A14403C02DA4B79B00D6E902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14403BE2DA4B79B00D6E902 /* LaunchScreen.storyboard */; };
+		A14403C32DA4B79B00D6E902 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403C22DA4B79B00D6E902 /* main.m */; };
+		A14403D92DA4EDA400D6E902 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403D82DA4EDA400D6E902 /* SignupViewController.m */; };
+		A14403E72DA51F8D00D6E902 /* customcell.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403E62DA51F8C00D6E902 /* customcell.m */; };
+		A14403EC2DA55A0200D6E902 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403EB2DA55A0200D6E902 /* LocationViewController.m */; };
+		A1670B942DB8B8E9003E2126 /* PastorDtlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1670B932DB8B8E8003E2126 /* PastorDtlsViewController.m */; };
+		A170FFD92DB90C5A0022B26B /* AboutusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A170FFD82DB90C5A0022B26B /* AboutusViewController.m */; };
+		A17B02B22DA64EF1008FE00A /* WhoweareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B12DA64EF1008FE00A /* WhoweareViewController.m */; };
+		A17B02B62DA64F9A008FE00A /* FindachurchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B52DA64F9A008FE00A /* FindachurchViewController.m */; };
+		A17B02BA2DA65053008FE00A /* NeedaprayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B92DA65053008FE00A /* NeedaprayerViewController.m */; };
+		A17B02BE2DA65140008FE00A /* ResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02BD2DA65140008FE00A /* ResourcesViewController.m */; };
+		A17B02C22DA651B7008FE00A /* GiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02C12DA651B7008FE00A /* GiveViewController.m */; };
+		A197F6302DBCF0E9004BEB0F /* VideoDtlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A197F62F2DBCF0E9004BEB0F /* VideoDtlsViewController.m */; };
+		A1BCE6D12DB35CA900F5B108 /* BookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BCE6D02DB35CA900F5B108 /* BookDetailsViewController.m */; };
+		A1D0D2D42DB7494500CA7866 /* LoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D0D2D32DB7494500CA7866 /* LoaderViewController.m */; };
+		A1D0D2D82DB76FB900CA7866 /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D0D2D72DB76FB900CA7866 /* Loader.xib */; };
+		A1D0D2DC2DB7701C00CA7866 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D0D2DB2DB7701C00CA7866 /* Loader.m */; };
+		A1DA21362DA63A8C0076A798 /* VisionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DA21352DA63A8C0076A798 /* VisionViewController.m */; };
+		A1DA213A2DA63A9D0076A798 /* MissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DA21392DA63A9D0076A798 /* MissionViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07A69461CE62252490C6320B /* Pods-Victory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Victory.release.xcconfig"; path = "Target Support Files/Pods-Victory/Pods-Victory.release.xcconfig"; sourceTree = "<group>"; };
+		21BC60B97A1F3B1737982AA5 /* Pods_Victory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Victory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A109E1522DAB5F7A006F9C39 /* BooksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksViewController.h; sourceTree = "<group>"; };
+		A109E1532DAB5F7A006F9C39 /* BooksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
+		A109E1562DAB63A4006F9C39 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A109E1572DAB63A4006F9C39 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A109E1612DACAB78006F9C39 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A109E1622DACAB78006F9C39 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A109E1652DACABBE006F9C39 /* PastorsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PastorsViewController.h; sourceTree = "<group>"; };
+		A109E1662DACABBE006F9C39 /* PastorsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastorsViewController.m; sourceTree = "<group>"; };
+		A109E1692DACCA52006F9C39 /* VgroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VgroupViewController.h; sourceTree = "<group>"; };
+		A109E16A2DACCA52006F9C39 /* VgroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VgroupViewController.m; sourceTree = "<group>"; };
+		A109E16D2DACCA6E006F9C39 /* TightsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TightsViewController.h; sourceTree = "<group>"; };
+		A109E16E2DACCA6E006F9C39 /* TightsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TightsViewController.m; sourceTree = "<group>"; };
+		A10AC8982DB4D97C00B85785 /* BooksTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksTableViewController.h; sourceTree = "<group>"; };
+		A10AC8992DB4D97D00B85785 /* BooksTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksTableViewController.m; sourceTree = "<group>"; };
+		A10EA8CE2DB0F8CB00AE35FC /* MYTapGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYTapGestureRecognizer.h; sourceTree = "<group>"; };
+		A10EA8CF2DB0F8CB00AE35FC /* MYTapGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYTapGestureRecognizer.m; sourceTree = "<group>"; };
+		A13ACA932DBB4AF30066038E /* VideoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
+		A13ACA942DBB4AF30066038E /* VideoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
+		A14403AD2DA4B79800D6E902 /* Victory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Victory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14403B02DA4B79800D6E902 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A14403B12DA4B79800D6E902 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A14403B32DA4B79800D6E902 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A14403B42DA4B79800D6E902 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A14403B62DA4B79800D6E902 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A14403B72DA4B79800D6E902 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A14403BA2DA4B79800D6E902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A14403BC2DA4B79B00D6E902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A14403BF2DA4B79B00D6E902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A14403C12DA4B79B00D6E902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14403C22DA4B79B00D6E902 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A14403D72DA4EDA400D6E902 /* SignupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		A14403D82DA4EDA400D6E902 /* SignupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		A14403E52DA51F8C00D6E902 /* customcell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customcell.h; sourceTree = "<group>"; };
+		A14403E62DA51F8C00D6E902 /* customcell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customcell.m; sourceTree = "<group>"; };
+		A14403EA2DA55A0200D6E902 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		A14403EB2DA55A0200D6E902 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		A1670B922DB8B8E8003E2126 /* PastorDtlsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PastorDtlsViewController.h; sourceTree = "<group>"; };
+		A1670B932DB8B8E8003E2126 /* PastorDtlsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastorDtlsViewController.m; sourceTree = "<group>"; };
+		A170FFD72DB90C5A0022B26B /* AboutusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutusViewController.h; sourceTree = "<group>"; };
+		A170FFD82DB90C5A0022B26B /* AboutusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutusViewController.m; sourceTree = "<group>"; };
+		A17B02B02DA64EF1008FE00A /* WhoweareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhoweareViewController.h; sourceTree = "<group>"; };
+		A17B02B12DA64EF1008FE00A /* WhoweareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhoweareViewController.m; sourceTree = "<group>"; };
+		A17B02B42DA64F9A008FE00A /* FindachurchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindachurchViewController.h; sourceTree = "<group>"; };
+		A17B02B52DA64F9A008FE00A /* FindachurchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindachurchViewController.m; sourceTree = "<group>"; };
+		A17B02B82DA65053008FE00A /* NeedaprayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeedaprayerViewController.h; sourceTree = "<group>"; };
+		A17B02B92DA65053008FE00A /* NeedaprayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeedaprayerViewController.m; sourceTree = "<group>"; };
+		A17B02BC2DA65140008FE00A /* ResourcesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourcesViewController.h; sourceTree = "<group>"; };
+		A17B02BD2DA65140008FE00A /* ResourcesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourcesViewController.m; sourceTree = "<group>"; };
+		A17B02C02DA651B7008FE00A /* GiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiveViewController.h; sourceTree = "<group>"; };
+		A17B02C12DA651B7008FE00A /* GiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiveViewController.m; sourceTree = "<group>"; };
+		A197F62E2DBCF0E9004BEB0F /* VideoDtlsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoDtlsViewController.h; sourceTree = "<group>"; };
+		A197F62F2DBCF0E9004BEB0F /* VideoDtlsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoDtlsViewController.m; sourceTree = "<group>"; };
+		A1BCE6CF2DB35CA900F5B108 /* BookDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookDetailsViewController.h; sourceTree = "<group>"; };
+		A1BCE6D02DB35CA900F5B108 /* BookDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookDetailsViewController.m; sourceTree = "<group>"; };
+		A1D0D2D22DB7494500CA7866 /* LoaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoaderViewController.h; sourceTree = "<group>"; };
+		A1D0D2D32DB7494500CA7866 /* LoaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoaderViewController.m; sourceTree = "<group>"; };
+		A1D0D2D72DB76FB900CA7866 /* Loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
+		A1D0D2DA2DB7701C00CA7866 /* Loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
+		A1D0D2DB2DB7701C00CA7866 /* Loader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Loader.m; sourceTree = "<group>"; };
+		A1DA21342DA63A8C0076A798 /* VisionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisionViewController.h; sourceTree = "<group>"; };
+		A1DA21352DA63A8C0076A798 /* VisionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisionViewController.m; sourceTree = "<group>"; };
+		A1DA21382DA63A9D0076A798 /* MissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MissionViewController.h; sourceTree = "<group>"; };
+		A1DA21392DA63A9D0076A798 /* MissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionViewController.m; sourceTree = "<group>"; };
+		DAAB2607E6DB5C9B9453105E /* Pods-Victory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Victory.debug.xcconfig"; path = "Target Support Files/Pods-Victory/Pods-Victory.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A14403AA2DA4B79800D6E902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023C3A45D007F6FAC472294C /* Pods_Victory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		188A140830CF5130E745ACC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB2607E6DB5C9B9453105E /* Pods-Victory.debug.xcconfig */,
+				07A69461CE62252490C6320B /* Pods-Victory.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		790B64EABC146FCFDD621E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21BC60B97A1F3B1737982AA5 /* Pods_Victory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A109E15A2DAB9B51006F9C39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A10EA8CE2DB0F8CB00AE35FC /* MYTapGestureRecognizer.h */,
+				A10EA8CF2DB0F8CB00AE35FC /* MYTapGestureRecognizer.m */,
+				A1D0D2D22DB7494500CA7866 /* LoaderViewController.h */,
+				A1D0D2D32DB7494500CA7866 /* LoaderViewController.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A14403A42DA4B79800D6E902 = {
+			isa = PBXGroup;
+			children = (
+				A14403AF2DA4B79800D6E902 /* Victory */,
+				A14403AE2DA4B79800D6E902 /* Products */,
+				188A140830CF5130E745ACC0 /* Pods */,
+				790B64EABC146FCFDD621E66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A14403AE2DA4B79800D6E902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A14403AD2DA4B79800D6E902 /* Victory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A14403AF2DA4B79800D6E902 /* Victory */ = {
+			isa = PBXGroup;
+			children = (
+				A1D0D2D62DB76FA100CA7866 /* Views */,
+				A109E15A2DAB9B51006F9C39 /* Utilities */,
+				A14403E02DA4EDD300D6E902 /* ViewControllers */,
+				A14403DF2DA4EDC300D6E902 /* Models */,
+				A14403B02DA4B79800D6E902 /* AppDelegate.h */,
+				A14403B12DA4B79800D6E902 /* AppDelegate.m */,
+				A14403B62DA4B79800D6E902 /* MainViewController.h */,
+				A14403B72DA4B79800D6E902 /* MainViewController.m */,
+				A14403B32DA4B79800D6E902 /* SceneDelegate.h */,
+				A14403B42DA4B79800D6E902 /* SceneDelegate.m */,
+				A14403B92DA4B79800D6E902 /* Main.storyboard */,
+				A14403BC2DA4B79B00D6E902 /* Assets.xcassets */,
+				A14403BE2DA4B79B00D6E902 /* LaunchScreen.storyboard */,
+				A14403C12DA4B79B00D6E902 /* Info.plist */,
+				A14403C22DA4B79B00D6E902 /* main.m */,
+				A14403E52DA51F8C00D6E902 /* customcell.h */,
+				A14403E62DA51F8C00D6E902 /* customcell.m */,
+			);
+			path = Victory;
+			sourceTree = "<group>";
+		};
+		A14403DF2DA4EDC300D6E902 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A14403E02DA4EDD300D6E902 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A14403D72DA4EDA400D6E902 /* SignupViewController.h */,
+				A14403D82DA4EDA400D6E902 /* SignupViewController.m */,
+				A14403EA2DA55A0200D6E902 /* LocationViewController.h */,
+				A14403EB2DA55A0200D6E902 /* LocationViewController.m */,
+				A1DA21342DA63A8C0076A798 /* VisionViewController.h */,
+				A1DA21352DA63A8C0076A798 /* VisionViewController.m */,
+				A1DA21382DA63A9D0076A798 /* MissionViewController.h */,
+				A1DA21392DA63A9D0076A798 /* MissionViewController.m */,
+				A17B02B02DA64EF1008FE00A /* WhoweareViewController.h */,
+				A17B02B12DA64EF1008FE00A /* WhoweareViewController.m */,
+				A17B02B42DA64F9A008FE00A /* FindachurchViewController.h */,
+				A17B02B52DA64F9A008FE00A /* FindachurchViewController.m */,
+				A17B02B82DA65053008FE00A /* NeedaprayerViewController.h */,
+				A17B02B92DA65053008FE00A /* NeedaprayerViewController.m */,
+				A17B02BC2DA65140008FE00A /* ResourcesViewController.h */,
+				A17B02BD2DA65140008FE00A /* ResourcesViewController.m */,
+				A17B02C02DA651B7008FE00A /* GiveViewController.h */,
+				A17B02C12DA651B7008FE00A /* GiveViewController.m */,
+				A109E1522DAB5F7A006F9C39 /* BooksViewController.h */,
+				A109E1532DAB5F7A006F9C39 /* BooksViewController.m */,
+				A109E1562DAB63A4006F9C39 /* ProfileViewController.h */,
+				A109E1572DAB63A4006F9C39 /* ProfileViewController.m */,
+				A109E1612DACAB78006F9C39 /* SettingsViewController.h */,
+				A109E1622DACAB78006F9C39 /* SettingsViewController.m */,
+				A109E1652DACABBE006F9C39 /* PastorsViewController.h */,
+				A109E1662DACABBE006F9C39 /* PastorsViewController.m */,
+				A109E1692DACCA52006F9C39 /* VgroupViewController.h */,
+				A109E16A2DACCA52006F9C39 /* VgroupViewController.m */,
+				A109E16D2DACCA6E006F9C39 /* TightsViewController.h */,
+				A109E16E2DACCA6E006F9C39 /* TightsViewController.m */,
+				A1BCE6CF2DB35CA900F5B108 /* BookDetailsViewController.h */,
+				A1BCE6D02DB35CA900F5B108 /* BookDetailsViewController.m */,
+				A10AC8982DB4D97C00B85785 /* BooksTableViewController.h */,
+				A10AC8992DB4D97D00B85785 /* BooksTableViewController.m */,
+				A1670B922DB8B8E8003E2126 /* PastorDtlsViewController.h */,
+				A1670B932DB8B8E8003E2126 /* PastorDtlsViewController.m */,
+				A170FFD72DB90C5A0022B26B /* AboutusViewController.h */,
+				A170FFD82DB90C5A0022B26B /* AboutusViewController.m */,
+				A13ACA932DBB4AF30066038E /* VideoTableViewController.h */,
+				A13ACA942DBB4AF30066038E /* VideoTableViewController.m */,
+				A197F62E2DBCF0E9004BEB0F /* VideoDtlsViewController.h */,
+				A197F62F2DBCF0E9004BEB0F /* VideoDtlsViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A1D0D2D62DB76FA100CA7866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1D0D2D72DB76FB900CA7866 /* Loader.xib */,
+				A1D0D2DA2DB7701C00CA7866 /* Loader.h */,
+				A1D0D2DB2DB7701C00CA7866 /* Loader.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A14403AC2DA4B79800D6E902 /* Victory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14403C62DA4B79B00D6E902 /* Build configuration list for PBXNativeTarget "Victory" */;
+			buildPhases = (
+				7B9CF169FFAA7D35006A09DF /* [CP] Check Pods Manifest.lock */,
+				A14403A92DA4B79800D6E902 /* Sources */,
+				A14403AA2DA4B79800D6E902 /* Frameworks */,
+				A14403AB2DA4B79800D6E902 /* Resources */,
+				5DABFDDBE7307DC312933BC9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Victory;
+			productName = Victory;
+			productReference = A14403AD2DA4B79800D6E902 /* Victory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A14403A52DA4B79800D6E902 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A14403AC2DA4B79800D6E902 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A14403A82DA4B79800D6E902 /* Build configuration list for PBXProject "Victory" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A14403A42DA4B79800D6E902;
+			productRefGroup = A14403AE2DA4B79800D6E902 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A14403AC2DA4B79800D6E902 /* Victory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A14403AB2DA4B79800D6E902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14403C02DA4B79B00D6E902 /* LaunchScreen.storyboard in Resources */,
+				A14403BD2DA4B79B00D6E902 /* Assets.xcassets in Resources */,
+				A1D0D2D82DB76FB900CA7866 /* Loader.xib in Resources */,
+				A14403BB2DA4B79800D6E902 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DABFDDBE7307DC312933BC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Victory/Pods-Victory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Victory/Pods-Victory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Victory/Pods-Victory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B9CF169FFAA7D35006A09DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Victory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A14403A92DA4B79800D6E902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17B02BE2DA65140008FE00A /* ResourcesViewController.m in Sources */,
+				A14403E72DA51F8D00D6E902 /* customcell.m in Sources */,
+				A10AC89A2DB4D97D00B85785 /* BooksTableViewController.m in Sources */,
+				A1DA213A2DA63A9D0076A798 /* MissionViewController.m in Sources */,
+				A197F6302DBCF0E9004BEB0F /* VideoDtlsViewController.m in Sources */,
+				A10EA8D02DB0F8CB00AE35FC /* MYTapGestureRecognizer.m in Sources */,
+				A109E1632DACAB78006F9C39 /* SettingsViewController.m in Sources */,
+				A14403EC2DA55A0200D6E902 /* LocationViewController.m in Sources */,
+				A13ACA952DBB4AF30066038E /* VideoTableViewController.m in Sources */,
+				A1DA21362DA63A8C0076A798 /* VisionViewController.m in Sources */,
+				A14403D92DA4EDA400D6E902 /* SignupViewController.m in Sources */,
+				A1BCE6D12DB35CA900F5B108 /* BookDetailsViewController.m in Sources */,
+				A109E16F2DACCA6E006F9C39 /* TightsViewController.m in Sources */,
+				A109E1672DACABBE006F9C39 /* PastorsViewController.m in Sources */,
+				A170FFD92DB90C5A0022B26B /* AboutusViewController.m in Sources */,
+				A14403B82DA4B79800D6E902 /* MainViewController.m in Sources */,
+				A1D0D2DC2DB7701C00CA7866 /* Loader.m in Sources */,
+				A1670B942DB8B8E9003E2126 /* PastorDtlsViewController.m in Sources */,
+				A17B02C22DA651B7008FE00A /* GiveViewController.m in Sources */,
+				A109E1582DAB63A4006F9C39 /* ProfileViewController.m in Sources */,
+				A17B02B62DA64F9A008FE00A /* FindachurchViewController.m in Sources */,
+				A17B02BA2DA65053008FE00A /* NeedaprayerViewController.m in Sources */,
+				A1D0D2D42DB7494500CA7866 /* LoaderViewController.m in Sources */,
+				A17B02B22DA64EF1008FE00A /* WhoweareViewController.m in Sources */,
+				A109E16B2DACCA52006F9C39 /* VgroupViewController.m in Sources */,
+				A14403B22DA4B79800D6E902 /* AppDelegate.m in Sources */,
+				A109E1542DAB5F7A006F9C39 /* BooksViewController.m in Sources */,
+				A14403C32DA4B79B00D6E902 /* main.m in Sources */,
+				A14403B52DA4B79800D6E902 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A14403B92DA4B79800D6E902 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14403BA2DA4B79800D6E902 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A14403BE2DA4B79B00D6E902 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14403BF2DA4B79B00D6E902 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A14403C42DA4B79B00D6E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A14403C72DA4B79B00D6E902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAAB2607E6DB5C9B9453105E /* Pods-Victory.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZRZR97UNF;
+				INFOPLIST_FILE = Victory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Reynald-Gragasin.Victory";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A14403A82DA4B79800D6E902 /* Build configuration list for PBXProject "Victory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14403C42DA4B79B00D6E902 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A14403C62DA4B79B00D6E902 /* Build configuration list for PBXNativeTarget "Victory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14403C72DA4B79B00D6E902 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A14403A52DA4B79800D6E902 /* Project object */;
+}

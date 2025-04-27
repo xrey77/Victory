@@ -1,0 +1,59 @@
+//
+//  BooksViewController.h
+//  Victory
+//
+//  Created by Reynald Marquez-Gragasin on 4/13/25.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface BooksViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIStackView *vstackView;
+@property (strong, nonatomic) IBOutlet UIView *subView;
+@property (strong, nonatomic) IBOutlet UIView *viewDetails;
+
+@property (nonatomic,strong)NSMutableArray *BookId;
+@property (nonatomic,strong)NSMutableArray *booksData;
+@property(nonatomic, strong)NSMutableArray *BookName;
+@property(nonatomic, strong)NSMutableArray *BookAuthor;
+@property(nonatomic, strong)NSMutableArray *BookDescription;
+@property(nonatomic, strong)NSMutableArray *BookPrice;
+@property(nonatomic, strong)NSMutableArray *BookImage;
+
+@property(strong, nonatomic)UILabel *lblTitle;
+
+@property(strong, nonatomic)UILabel *lblIdno;
+
+@property(strong, nonatomic)UILabel *lblBooknameTitle;
+@property(strong, nonatomic)UILabel *lblBookname;
+@property(strong, nonatomic)UILabel *dtlBookname;
+
+@property(strong, nonatomic)UILabel *lblAuthor;
+@property(strong, nonatomic)UILabel *dtlAuthor;
+@property(strong, nonatomic)UILabel *lblAuthorTitle;
+
+@property(strong, nonatomic)UILabel *lblDescription;
+@property(strong, nonatomic)UILabel *dtlDescription;
+@property(strong, nonatomic)UILabel *lblDescriptionTitle;
+
+@property(strong, nonatomic)UILabel *lblPrice;
+@property(strong, nonatomic)UILabel *dtlPrice;
+@property(strong, nonatomic)UILabel *lblPriceTitle;
+
+@property(strong, nonatomic)UIImageView *imgBook;
+@property(strong, nonatomic)UIImageView *dtlimgBook;
+
+@property(strong, nonatomic)UIImageView *btnDtl;
+@property(strong, nonatomic)UIImageView *btnCart;
+@property(strong, nonatomic)UIImageView *btnCancel;
+
+@property (nonatomic, strong) NSString *data;
+
+@property(nonatomic, assign)BOOL switchDtl;
+
+@end
+
+NS_ASSUME_NONNULL_END

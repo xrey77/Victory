@@ -1,0 +1,378 @@
+//
+//  BooksViewController.m
+//  Victory
+//
+//  Created by Reynald Marquez-Gragasin on 4/13/25.
+//
+
+#import "BooksViewController.h"
+#import "MYTapGestureRecognizer.h"
+#import "BookDetailsViewController.h"
+
+@interface BooksViewController()
+@end
+
+
+@implementation BooksViewController
+
+@synthesize booksData, BookName, BookPrice, BookImage, scrollView, vstackView,lblTitle,BookDescription,BookAuthor;
+@synthesize lblBookname,lblDescription,lblPrice,imgBook,btnDtl,viewDetails,data,lblAuthor,BookId,lblIdno;
+@synthesize lblBooknameTitle, lblDescriptionTitle, lblAuthorTitle, lblPriceTitle, btnCart, btnCancel, dtlPrice,dtlBookname, dtlimgBook,dtlAuthor,dtlDescription;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self viewDetailsData];
+    
+
+
+}
+
+-(void)viewDetailsData {
+
+    self->lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(10,10,330,50)];
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+    // or @"yyyy-MM-dd hh:mm:ss a" if you prefer the time with AM/PM
+    
+    NSString *xtitle = @"List of Books as of ";
+    
+    self->lblTitle.text = [xtitle stringByAppendingString:[dateFormatter stringFromDate:[NSDate date]]];
+    self->lblTitle.textColor = UIColor.whiteColor;
+    self->lblTitle.textAlignment = NSTextAlignmentLeft;
+    self->lblTitle.font = [UIFont fontWithName:@"Arial" size:18];
+
+    
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.scrollView setContentSize:(CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*10))];
+    self.scrollView.showsVerticalScrollIndicator = false;
+    
+    self->vstackView = [[UIStackView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view addSubview:self->scrollView];
+    
+    self->vstackView.axis = UILayoutConstraintAxisVertical;
+    self->vstackView.alignment = UIStackViewAlignmentFill;
+    self->vstackView.backgroundColor = UIColor.clearColor;
+    self->vstackView.distribution = UIStackViewDistributionFill;
+    [self.view addSubview:self->vstackView];
+    [self.vstackView addSubview:self->lblTitle];
+
+    self->_subView = [[UIView alloc] init];
+
+    self->BookId = [[NSMutableArray alloc] init];
+    self->booksData = [[NSMutableArray alloc] init];
+    self->BookName = [[NSMutableArray alloc] init];
+//    self->BookAuthor = [[NSMutableArray alloc] init];
+    self->BookPrice = [[NSMutableArray alloc] init];
+    self->BookImage = [[NSMutableArray alloc] init];
+//    self->BookDescription = [[NSMutableArray alloc] init];
+
+    [self fetchBooksData];
+
+    int64_t delay = 3.0; // In seconds
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^(void){
+        
+//        BOOK NAME======================
+        long yrow1 = 100;
+        long yrow2 = 200;
+
+        NSMutableArray *bookNameArray = self->booksData[0];
+        NSMutableArray *bookPriceArray = self->booksData[1];
+        NSMutableArray *bookImageArray = self->booksData[2];
+        NSMutableArray *bookIdArray = self->booksData[3];
+
+        for (int i = 0; i < [bookNameArray count]; i++) {
+            self->imgBook = [[UIImageView alloc]initWithFrame:CGRectMake(10,yrow1,100, 100)];
+            NSString *url = @"http://127.0.0.1:9000/assets/ccfbooks/";
+            url = [url stringByAppendingString:bookImageArray[i]];
+            
+            NSURL *nsUrl = [NSURL URLWithString:url];
+            NSData *data = [NSData dataWithContentsOfURL:nsUrl];
+            self->imgBook.image = [UIImage imageWithData:data];
+            self->imgBook.userInteractionEnabled = true;
+            self->imgBook.clipsToBounds = true;
+            self->imgBook.layer.cornerRadius = 10;
+            [self->_subView addSubview:self->imgBook];
+            [self->vstackView addArrangedSubview:self->_subView];
+            
+            self->lblBookname = [[UILabel alloc] initWithFrame:CGRectMake(130,yrow1,250,50)];
+            self->lblBookname.text = bookNameArray[i];
+            self->lblBookname.textColor = UIColor.whiteColor;
+            self->lblBookname.textAlignment = NSTextAlignmentLeft;
+            self->lblBookname.font = [UIFont fontWithName:@"Arial" size:18];
+            self->lblBookname.numberOfLines = 2;
+            [self->lblBookname setLineBreakMode:NSLineBreakByWordWrapping];
+            [self->lblBookname sizeToFit];
+            self->lblBookname.lineBreakMode = NSLineBreakByWordWrapping;
+            [self->_subView addSubview:self->lblBookname];
+            [self->vstackView addArrangedSubview: self->_subView];
+
+            
+            if (self->lblBookname.frame.size.height > 20.50) {
+                self->dtlPrice = [[UILabel alloc] initWithFrame:CGRectMake(130,yrow1+30,330,50)];
+                self->dtlPrice.text = [@"Price : " stringByAppendingString:bookPriceArray[i]];
+                self->dtlPrice.textColor = UIColor.whiteColor;
+                self->dtlPrice.textAlignment = NSTextAlignmentLeft;
+                self->dtlPrice.font = [UIFont fontWithName:@"Arial" size:18];
+                [self->_subView addSubview:self->dtlPrice];
+                
+                self->lblIdno = [[UILabel alloc] initWithFrame:CGRectMake(250,yrow1+10,330,50)];
+                self->lblIdno.text = [NSString stringWithFormat:@"%@", bookIdArray[i]];
+                self->lblIdno.textColor = UIColor.whiteColor;
+                [self->_subView addSubview:self->lblIdno];
+
+                
+                [self->vstackView addArrangedSubview: self->_subView];
+                
+                self->btnDtl = [[UIImageView alloc]initWithFrame:CGRectMake(130,yrow1+70,100, 28)];
+                self->btnDtl.image = [UIImage imageNamed:@"details"];
+                self->btnDtl.userInteractionEnabled = true;
+
+                MYTapGestureRecognizer *tapDtlGesture = [[MYTapGestureRecognizer alloc] initWithTarget:self action:@selector(dtlImageTapped:)];
+//                tapDtlGesture.bookId = self->lblIdno.text;
+                tapDtlGesture.numberOfTapsRequired = 1;
+                [tapDtlGesture setDelegate:nil];
+                self->btnDtl.tag = i;
+                [self->btnDtl addGestureRecognizer:tapDtlGesture];
+                self->btnDtl.backgroundColor = UIColor.clearColor;
+                self->btnDtl.tintColor = UIColor.whiteColor;
+                [self->_subView addSubview:self->btnDtl];
+                [self->vstackView addArrangedSubview: self->_subView];
+
+
+            } else {
+                self->dtlPrice = [[UILabel alloc] initWithFrame:CGRectMake(130,yrow1+10,330,50)];
+                self->dtlPrice.text = [@"Price : " stringByAppendingString:bookPriceArray[i]];
+                self->dtlPrice.textColor = UIColor.whiteColor;
+                self->dtlPrice.textAlignment = NSTextAlignmentLeft;
+                self->dtlPrice.font = [UIFont fontWithName:@"Arial" size:18];
+                [self->_subView addSubview:self->dtlPrice];
+
+                self->lblIdno = [[UILabel alloc] initWithFrame:CGRectMake(250,yrow1+10,330,50)];
+                self->lblIdno.text = [NSString stringWithFormat:@"%@", bookIdArray[i]];
+                self->lblIdno.textColor = UIColor.whiteColor;
+                [self->_subView addSubview:self->lblIdno];
+
+                
+                
+                [self->vstackView addArrangedSubview: self->_subView];
+
+                self->btnDtl = [[UIImageView alloc]initWithFrame:CGRectMake(130,yrow1+50,100,28)];
+                self->btnDtl.image = [UIImage imageNamed:@"details"];
+                self->btnDtl.userInteractionEnabled = true;
+//                MYTapGestureRecognizer *tapDtlGesture = [[MYTapGestureRecognizer alloc] initWithTarget:self action:@selector(dtlImageTapped:)];
+
+                MYTapGestureRecognizer *tapDtlGesture = [[MYTapGestureRecognizer alloc] initWithTarget:self action:@selector(dtlImageTapped:)];
+
+                //[self performSelector:@selector(adding::)withObject:@"num1" withObject:@"num2"];
+
+//                tapDtlGesture.bookId = self->lblIdno.text;
+                tapDtlGesture.numberOfTapsRequired = 1;
+                [tapDtlGesture setDelegate:nil];
+
+
+
+                [self->btnDtl addGestureRecognizer:tapDtlGesture];
+                self->btnDtl.backgroundColor = UIColor.clearColor;
+                self->btnDtl.tintColor = UIColor.whiteColor;
+                [self->_subView addSubview:self->btnDtl];
+                [self->vstackView addArrangedSubview: self->_subView];
+
+            }
+            yrow1 += 150;
+            yrow2 += 200;
+
+        }
+
+    });
+        [self.scrollView addSubview:self->vstackView];
+}
+
+
+///DETAILS IMAGE BUTTON
+-(IBAction)dtlImageTapped:(UITapGestureRecognizer *)tapRecognizer {
+//        MYTapGestureRecognizer *tap = (MYTapGestureRecognizer *)tapRecognizer;
+    
+//        NSArray *passdata = [[NSArray alloc] initWithObjects:
+//                             tap.bookId, nil];
+////        [self detailsView:passdata];
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    BookDetailsViewController *bookDTLSviewVC = (BookDetailsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"bookDTLSviewVC"];
+//    bookDTLSviewVC.bookId = tap.bookId;
+//    [self.navigationController pushViewController:bookDTLSviewVC animated:YES];
+
+    NSLog(@"%ld",(long)self->btnDtl.tag);
+    
+}
+
+-(void)fetchBooksData {
+    NSString *url = @"http://127.0.0.1:9000/getccfbooks";
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    
+    [urlRequest setHTTPMethod:@"GET"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+    {
+        NSDictionary *apiData = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+
+        for (NSDictionary *dic in apiData) {
+            [self->BookName addObject:dic[@"bookname"]];
+            [self->BookPrice addObject:dic[@"bookprice"]];
+            [self->BookImage addObject:dic[@"bookimage"]];
+            [self->BookId addObject:dic[@"id"]];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self->booksData = [[NSMutableArray alloc] initWithObjects:self->BookName,self->BookPrice,self->BookImage,self->BookId,nil];
+        });
+
+        
+    }];
+    [dataTask resume];
+    
+}
+
+///VIEW DETAILS
+-(void)detailsView:(NSArray *)passdata  {
+    
+        [UIView transitionWithView:self.view duration:2.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            self->viewDetails.hidden = false;
+
+            self->viewDetails = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+            self->viewDetails.backgroundColor = UIColor.greenColor;
+            self->viewDetails.layer.borderColor = UIColor.systemGreenColor.CGColor;
+            [self.view addSubview:self->viewDetails];
+            
+            self->dtlimgBook = [[UIImageView alloc]initWithFrame:CGRectMake(80,90,200, 200)];
+            NSString *url = @"http://127.0.0.1:9000/assets/ccfbooks/";
+            url = [url stringByAppendingString:passdata[4]];
+            NSURL *nsUrl = [NSURL URLWithString:url];
+            NSData *data = [NSData dataWithContentsOfURL:nsUrl];
+            self->dtlimgBook.image = [UIImage imageWithData:data];
+            self->dtlimgBook.userInteractionEnabled = true;
+            self->dtlimgBook.clipsToBounds = true;
+            self->dtlimgBook.layer.cornerRadius = 10;
+            [self->viewDetails addSubview:self->dtlimgBook];
+
+            self->lblBooknameTitle = [[UILabel alloc] initWithFrame:CGRectMake(40,290,300,50)];
+            self->lblBooknameTitle.text = @"BOOK NAME";
+            self->lblBooknameTitle.textColor = UIColor.blueColor;
+            self->lblBooknameTitle.textAlignment = NSTextAlignmentCenter;
+            self->lblBooknameTitle.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->lblBooknameTitle];
+            
+            self->dtlBookname = [[UILabel alloc] initWithFrame:CGRectMake(40,315,300,50)];
+            self->dtlBookname.text = passdata[0];
+            self->dtlBookname.textColor = UIColor.blackColor;
+            self->dtlBookname.textAlignment = NSTextAlignmentCenter;
+            self->dtlBookname.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->dtlBookname];
+
+            self->lblAuthorTitle = [[UILabel alloc] initWithFrame:CGRectMake(40,350,300,50)];
+            self->lblAuthorTitle.text = @"AUTHOR";
+            self->lblAuthorTitle.textColor = UIColor.blueColor;
+            self->lblAuthorTitle.textAlignment = NSTextAlignmentCenter;
+            self->lblAuthorTitle.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->lblAuthorTitle];
+
+            self->dtlAuthor = [[UILabel alloc] initWithFrame:CGRectMake(40,375,300,50)];
+            self->dtlAuthor.text = passdata[3];
+            self->dtlAuthor.textColor = UIColor.blackColor;
+            self->dtlAuthor.textAlignment = NSTextAlignmentCenter;
+            self->dtlAuthor.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->dtlAuthor];
+
+            self->lblDescriptionTitle = [[UILabel alloc] initWithFrame:CGRectMake(40,420,300,50)];
+            self->lblDescriptionTitle.text = @"BOOK DESCRIPTION";
+            self->lblDescriptionTitle.textColor = UIColor.blueColor;
+            self->lblDescriptionTitle.textAlignment = NSTextAlignmentCenter;
+            self->lblDescriptionTitle.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->lblDescriptionTitle];
+            
+            self->dtlDescription = [[UILabel alloc] initWithFrame:CGRectMake(40,460,300,50)];
+            self->dtlDescription.text = passdata[1];
+            self->dtlDescription.numberOfLines = 4;
+            [self->dtlDescription setLineBreakMode:NSLineBreakByWordWrapping];
+            self->dtlDescription.textColor = UIColor.blackColor;
+            self->dtlDescription.textAlignment = NSTextAlignmentCenter;
+            self->dtlDescription.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->dtlDescription sizeToFit];
+            self->dtlDescription.lineBreakMode = NSLineBreakByWordWrapping;
+            [self->viewDetails addSubview:self->dtlDescription];
+
+            self->lblPriceTitle = [[UILabel alloc] initWithFrame:CGRectMake(40,530,300,50)];
+            self->lblPriceTitle.text = @"SELLING PRICE";
+            self->lblPriceTitle.textColor = UIColor.blueColor;
+            self->lblPriceTitle.textAlignment = NSTextAlignmentCenter;
+            self->lblPriceTitle.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->lblPriceTitle];
+
+            self->dtlPrice = [[UILabel alloc] initWithFrame:CGRectMake(40,560,300,50)];
+            self->dtlPrice.text = passdata[2];
+            self->dtlPrice.textColor = UIColor.blackColor;
+            self->dtlPrice.textAlignment = NSTextAlignmentCenter;
+            self->dtlPrice.font = [UIFont fontWithName:@"Arial" size:20];
+            [self->viewDetails addSubview:self->dtlPrice];
+
+            self->btnCart = [[UIImageView alloc]initWithFrame:CGRectMake(40,610,120, 35)];
+            self->btnCart.image = [UIImage imageNamed:@"cart"];
+            self->btnCart.userInteractionEnabled = true;
+            UITapGestureRecognizer *tapCartGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(cartImageTapped:)];
+            tapCartGesture.numberOfTapsRequired = 1;
+            [tapCartGesture setDelegate:nil];
+            [self->btnCart addGestureRecognizer:tapCartGesture];
+            [self->viewDetails addSubview:self->btnCart];
+
+            self->btnCancel = [[UIImageView alloc]initWithFrame:CGRectMake(180,610,120, 40)];
+            self->btnCancel.image = [UIImage imageNamed:@"cancel"];
+            self->btnCancel.userInteractionEnabled = true;
+            UITapGestureRecognizer *tapCancelGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(cancelImageTapped:)];
+            tapCancelGesture.numberOfTapsRequired = 1;
+            [tapCancelGesture setDelegate:nil];
+            [self->btnCancel addGestureRecognizer:tapCancelGesture];
+            [self->viewDetails addSubview:self->btnCancel];
+
+        } completion:^(BOOL finished) {
+
+        }];
+}
+
+
+-(void)cartImageTapped:(id)sender {
+    NSLog(@"%s","add to Cart..");
+}
+
+-(void)cancelImageTapped:(id)sender {
+    [UIView transitionWithView:self.view duration:2.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+      self->viewDetails.hidden = true;
+    } completion:^(BOOL finished) {
+
+    }];
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+@end
+
+
+/**
+ //option 1
+ 
+ NSDictionary *dicto;
+ NSString *ndccode;
+ NSMutableArray *outputArray=[NSMutableArray new];
+ for (int i=0; i<array.count; i++) {
+     dicto=[array objectAtIndex:i];
+     ndccode=[dicto objectForKey:@"NDCCode"];
+     [outputArray addObject:ndccode];
+ }
+
+// option 2
+ NSArray *outputArray = [array valueForKey:@"NDCCode"];
+ 
+ */

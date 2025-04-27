@@ -1,0 +1,6 @@
+framework module XCDYouTubeVideoPlayerViewController {
+  umbrella header "XCDYouTubeVideoPlayerViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
