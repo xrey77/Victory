@@ -29,6 +29,7 @@
 		A14403EC2DA55A0200D6E902 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14403EB2DA55A0200D6E902 /* LocationViewController.m */; };
 		A1670B942DB8B8E9003E2126 /* PastorDtlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1670B932DB8B8E8003E2126 /* PastorDtlsViewController.m */; };
 		A170FFD92DB90C5A0022B26B /* AboutusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A170FFD82DB90C5A0022B26B /* AboutusViewController.m */; };
+		A172F9E42DC34B99008CCA14 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A172F9E32DC34B99008CCA14 /* LoginViewController.m */; };
 		A17B02B22DA64EF1008FE00A /* WhoweareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B12DA64EF1008FE00A /* WhoweareViewController.m */; };
 		A17B02B62DA64F9A008FE00A /* FindachurchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B52DA64F9A008FE00A /* FindachurchViewController.m */; };
 		A17B02BA2DA65053008FE00A /* NeedaprayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B02B92DA65053008FE00A /* NeedaprayerViewController.m */; };
@@ -86,6 +87,8 @@
 		A1670B932DB8B8E8003E2126 /* PastorDtlsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastorDtlsViewController.m; sourceTree = "<group>"; };
 		A170FFD72DB90C5A0022B26B /* AboutusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutusViewController.h; sourceTree = "<group>"; };
 		A170FFD82DB90C5A0022B26B /* AboutusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutusViewController.m; sourceTree = "<group>"; };
+		A172F9E22DC34B99008CCA14 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A172F9E32DC34B99008CCA14 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A17B02B02DA64EF1008FE00A /* WhoweareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhoweareViewController.h; sourceTree = "<group>"; };
 		A17B02B12DA64EF1008FE00A /* WhoweareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhoweareViewController.m; sourceTree = "<group>"; };
 		A17B02B42DA64F9A008FE00A /* FindachurchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindachurchViewController.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				A13ACA942DBB4AF30066038E /* VideoTableViewController.m */,
 				A197F62E2DBCF0E9004BEB0F /* VideoDtlsViewController.h */,
 				A197F62F2DBCF0E9004BEB0F /* VideoDtlsViewController.m */,
+				A172F9E22DC34B99008CCA14 /* LoginViewController.h */,
+				A172F9E32DC34B99008CCA14 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				A1BCE6D12DB35CA900F5B108 /* BookDetailsViewController.m in Sources */,
 				A109E16F2DACCA6E006F9C39 /* TightsViewController.m in Sources */,
 				A109E1672DACABBE006F9C39 /* PastorsViewController.m in Sources */,
+				A172F9E42DC34B99008CCA14 /* LoginViewController.m in Sources */,
 				A170FFD92DB90C5A0022B26B /* AboutusViewController.m in Sources */,
 				A14403B82DA4B79800D6E902 /* MainViewController.m in Sources */,
 				A1D0D2DC2DB7701C00CA7866 /* Loader.m in Sources */,

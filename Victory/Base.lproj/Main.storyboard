@@ -27,7 +27,7 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7RA-9D-kBz">
-                        <barButtonItem key="leftBarButtonItem" image="text.justify" catalog="system" id="vw2-Ak-zfT">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="vw2-Ak-zfT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="didDrawerTapped:" destination="BYZ-38-t0r" id="4VD-XB-hV3"/>
@@ -540,7 +540,7 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="text.justify" catalog="system" width="128" height="100"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

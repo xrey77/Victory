@@ -12,22 +12,18 @@
 @property(strong, nonatomic) UISwipeGestureRecognizer *right;
 @property(strong, nonatomic) UISwipeGestureRecognizer *left;
 
-@property(strong, nonatomic)UITextField *txtUsername;
-@property(strong, nonatomic)UITextField *txtPassword;
-@property(strong, nonatomic)UIButton *btnSignin;
-@property(strong, nonatomic)UIView *msgView;
-@property(strong, nonatomic)UIView *topView;
-@property(strong, nonatomic)UIImageView *close;
-@property(strong, nonatomic)UIImageView *userIcon;
-@property(strong, nonatomic)UIImageView *btnIcon;
-@property(strong, nonatomic)UILabel *lblalert;
-@property(strong, nonatomic)NSString *alertMessage;
-@property(strong, nonatomic)UIView *mainView;
+//@property(strong, nonatomic)UITextField *txtUsername;
+//@property(strong, nonatomic)UITextField *txtPassword;
+//@property(strong, nonatomic)UIButton *btnSignin;
+//@property(strong, nonatomic)UIView *msgView;
+//@property(strong, nonatomic)UIView *topView;
+//@property(strong, nonatomic)UIImageView *close;
+//@property(strong, nonatomic)UIImageView *btnIcon;
+//@property(strong, nonatomic)UILabel *lblalert;
+//@property(strong, nonatomic)NSString *alertMessage;
+//@property(strong, nonatomic)UIView *mainView;
 @property(nonatomic, assign) BOOL barItem;
-@property(nonatomic, assign) BOOL isErrMsg;
 @property(nonatomic, assign) BOOL showMenu;
-@property(strong, nonatomic)UIView *forgotView;
-@property(strong, nonatomic)UIButton *forgotBtn;
 @property (nonatomic, strong) NSMutableArray *menuData;
 
 @property(strong, nonatomic)UIView *sideView;
@@ -36,14 +32,6 @@
 @property(strong, nonatomic)UILabel *userName;
 @property(strong, nonatomic)UILabel *userEmail;
 @property(strong, nonatomic)IBOutlet UITableView *sidebar;
-@property(nonatomic, copy)NSString *statusMsg;
-@property(nonatomic, copy)NSString *statusCode;
-@property(nonatomic, copy)NSString *userFullname;
-@property(nonatomic, copy)NSString *userEmailadd;
-@property(nonatomic, copy)NSString *userPicture;
-@property(nonatomic, copy)NSString *token;
-@property(nonatomic, copy)NSString *userId;
-@property(nonatomic, assign)BOOL isLoggedin;
 
 @property (strong, nonatomic) IBOutlet UIToolbar *bottomBar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *booksItem;
@@ -57,6 +45,15 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;
 @property (strong, nonatomic) IBOutlet UIImage *settingsImage;
+@property(assign, nonatomic)BOOL isLoggedin;
+@property(strong, nonatomic)NSString *strUserid;
+@property(strong, nonatomic)NSString *strUsername;
+@property(strong, nonatomic)NSString *strUseremail;
+@property(nonatomic, assign)NSString *strUserpicture;
+@property(strong, nonatomic)NSString *strToken;
+
+
+
 
 @end
 
